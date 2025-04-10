@@ -337,5 +337,281 @@
     </div>
     <div className="absolute inset-0 bg-gradient-to-br from-rose-300/20 via-transparent to-amber-300/20 dark:from-rose-900/20 dark:to-amber-900/20"></div>
   </div>`
+    }, {
+      name: "Circuit Board",
+      component: () => (
+        <div className="absolute inset-0 bg-gray-950 overflow-hidden">
+          <div className="absolute inset-0 opacity-20">
+            <svg width="100%" height="100%">
+              <pattern
+                id="circuit-pattern"
+                x="0"
+                y="0"
+                width="40"
+                height="40"
+                patternUnits="userSpaceOnUse"
+              >
+                <rect width="40" height="40" fill="transparent" />
+                <path 
+                  d="M0 20H40M20 0V40" 
+                  stroke="currentColor" 
+                  strokeWidth="0.5" 
+                  className="text-blue-400"
+                />
+                <circle cx="20" cy="20" r="1" fill="currentColor" className="text-emerald-400" />
+              </pattern>
+              <rect width="100%" height="100%" fill="url(#circuit-pattern)" />
+            </svg>
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-emerald-900/20"></div>
+        </div>
+      ),
+      code: `<div className="absolute inset-0 bg-gray-950 overflow-hidden">
+    <div className="absolute inset-0 opacity-20">
+      <svg width="100%" height="100%">
+        <pattern
+          id="circuit-pattern"
+          x="0"
+          y="0"
+          width="40"
+          height="40"
+          patternUnits="userSpaceOnUse"
+        >
+          <rect width="40" height="40" fill="transparent" />
+          <path 
+            d="M0 20H40M20 0V40" 
+            stroke="currentColor" 
+            strokeWidth="0.5" 
+            className="text-blue-400"
+          />
+          <circle cx="20" cy="20" r="1" fill="currentColor" className="text-emerald-400" />
+        </pattern>
+        <rect width="100%" height="100%" fill="url(#circuit-pattern)" />
+      </svg>
+    </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-blue-900/20 via-transparent to-emerald-900/20"></div>
+  </div>`
+    },
+    {
+      name: "Dot Matrix",
+      component: () => (
+        <div className="absolute inset-0 bg-gray-900 overflow-hidden">
+          <div className="absolute inset-0 opacity-30 dark:opacity-40">
+            <svg width="100%" height="100%">
+              <pattern
+                id="dot-pattern"
+                x="0"
+                y="0"
+                width="20"
+                height="20"
+                patternUnits="userSpaceOnUse"
+              >
+                <circle cx="10" cy="10" r="0.5" fill="currentColor" className="text-purple-400" />
+              </pattern>
+              <rect width="100%" height="100%" fill="url(#dot-pattern)" />
+            </svg>
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-transparent to-indigo-900/30"></div>
+        </div>
+      ),
+      code: `<div className="absolute inset-0 bg-gray-900 overflow-hidden">
+    <div className="absolute inset-0 opacity-30 dark:opacity-40">
+      <svg width="100%" height="100%">
+        <pattern
+          id="dot-pattern"
+          x="0"
+          y="0"
+          width="20"
+          height="20"
+          patternUnits="userSpaceOnUse"
+        >
+          <circle cx="10" cy="10" r="0.5" fill="currentColor" className="text-purple-400" />
+        </pattern>
+        <rect width="100%" height="100%" fill="url(#dot-pattern)" />
+      </svg>
+    </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-purple-900/30 via-transparent to-indigo-900/30"></div>
+  </div>`
+    },
+    {
+      name: "Hexagonal Grid",
+      component: () => (
+        <div className="absolute inset-0 bg-gray-950 overflow-hidden">
+          <div className="absolute inset-0 opacity-15">
+            <svg width="100%" height="100%">
+              <pattern
+                id="hex-pattern"
+                x="0"
+                y="0"
+                width="86"
+                height="100"
+                patternUnits="userSpaceOnUse"
+              >
+                <path 
+                  d="M0 50L43 25L86 50L86 75L43 100L0 75Z" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="0.8" 
+                  className="text-cyan-400"
+                />
+                <path 
+                  d="M43 0L86 25L86 50L43 75L0 50L0 25Z" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="0.8" 
+                  className="text-cyan-400"
+                />
+              </pattern>
+              <rect width="100%" height="100%" fill="url(#hex-pattern)" />
+            </svg>
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-transparent to-gray-900"></div>
+        </div>
+      ),
+      code: `<div className="absolute inset-0 bg-gray-950 overflow-hidden">
+    <div className="absolute inset-0 opacity-15">
+      <svg width="100%" height="100%">
+        <pattern
+          id="hex-pattern"
+          x="0"
+          y="0"
+          width="86"
+          height="100"
+          patternUnits="userSpaceOnUse"
+        >
+          <path 
+            d="M0 50L43 25L86 50L86 75L43 100L0 75Z" 
+            fill="none" 
+            stroke="currentColor" 
+            strokeWidth="0.8" 
+            className="text-cyan-400"
+          />
+          <path 
+            d="M43 0L86 25L86 50L43 75L0 50L0 25Z" 
+            fill="none" 
+            stroke="currentColor" 
+            strokeWidth="0.8" 
+            className="text-cyan-400"
+          />
+        </pattern>
+        <rect width="100%" height="100%" fill="url(#hex-pattern)" />
+      </svg>
+    </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-cyan-900/20 via-transparent to-gray-900"></div>
+  </div>`
+    },
+    {
+      name: "Waves",
+      component: () => (
+        <div className="absolute inset-0 bg-gray-900 overflow-hidden">
+          <div className="absolute inset-0 opacity-20">
+            <svg width="100%" height="100%">
+              <pattern
+                id="wave-pattern"
+                x="0"
+                y="0"
+                width="120"
+                height="80"
+                patternUnits="userSpaceOnUse"
+              >
+                <path 
+                  d="M0 40 Q30 20 60 40 T120 40" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="1" 
+                  className="text-violet-400"
+                />
+                <path 
+                  d="M0 60 Q30 40 60 60 T120 60" 
+                  fill="none" 
+                  stroke="currentColor" 
+                  strokeWidth="1" 
+                  className="text-violet-400"
+                  strokeDasharray="2,2"
+                />
+              </pattern>
+              <rect width="100%" height="100%" fill="url(#wave-pattern)" />
+            </svg>
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-br from-violet-900/20 via-transparent to-gray-900"></div>
+        </div>
+      ),
+      code: `<div className="absolute inset-0 bg-gray-900 overflow-hidden">
+    <div className="absolute inset-0 opacity-20">
+      <svg width="100%" height="100%">
+        <pattern
+          id="wave-pattern"
+          x="0"
+          y="0"
+          width="120"
+          height="80"
+          patternUnits="userSpaceOnUse"
+        >
+          <path 
+            d="M0 40 Q30 20 60 40 T120 40" 
+            fill="none" 
+            stroke="currentColor" 
+            strokeWidth="1" 
+            className="text-violet-400"
+          />
+          <path 
+            d="M0 60 Q30 40 60 60 T120 60" 
+            fill="none" 
+            stroke="currentColor" 
+            strokeWidth="1" 
+            className="text-violet-400"
+            strokeDasharray="2,2"
+          />
+        </pattern>
+        <rect width="100%" height="100%" fill="url(#wave-pattern)" />
+      </svg>
+    </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-violet-900/20 via-transparent to-gray-900"></div>
+  </div>`
+    },
+    {
+      name: "Diagonal Stripes",
+      component: () => (
+        <div className="absolute inset-0 bg-gray-950 overflow-hidden">
+          <div className="absolute inset-0 opacity-10">
+            <svg width="100%" height="100%">
+              <pattern
+                id="stripe-pattern"
+                x="0"
+                y="0"
+                width="40"
+                height="40"
+                patternUnits="userSpaceOnUse"
+                patternTransform="rotate(45)"
+              >
+                <rect width="20" height="40" fill="currentColor" className="text-indigo-400" opacity="0.3" />
+              </pattern>
+              <rect width="100%" height="100%" fill="url(#stripe-pattern)" />
+            </svg>
+          </div>
+          <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-transparent to-gray-900"></div>
+        </div>
+      ),
+      code: `<div className="absolute inset-0 bg-gray-950 overflow-hidden">
+    <div className="absolute inset-0 opacity-10">
+      <svg width="100%" height="100%">
+        <pattern
+          id="stripe-pattern"
+          x="0"
+          y="0"
+          width="40"
+          height="40"
+          patternUnits="userSpaceOnUse"
+          patternTransform="rotate(45)"
+        >
+          <rect width="20" height="40" fill="currentColor" className="text-indigo-400" opacity="0.3" />
+        </pattern>
+        <rect width="100%" height="100%" fill="url(#stripe-pattern)" />
+      </svg>
+    </div>
+    <div className="absolute inset-0 bg-gradient-to-br from-indigo-900/20 via-transparent to-gray-900"></div>
+  </div>`
     }]
     export default backgroundsData;
+   
+ 
