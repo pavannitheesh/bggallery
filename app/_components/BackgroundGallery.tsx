@@ -1,5 +1,5 @@
 import { BACKGROUND_OPTIONS as backgrounds } from '@/data/background';
-
+import { renderToString } from 'react-dom/server';
 type BackgroundGalleryProps = {
   activeIndex: number;
   onBackgroundChange: (index: number) => void;
@@ -9,8 +9,8 @@ export function BackgroundGallery({ activeIndex, onBackgroundChange }: Backgroun
   const handleCopyCode = async (bg: typeof backgrounds[0], e: React.MouseEvent) => {
     e.stopPropagation();
     try {
-      const componentString = bg.component.type.toString();
-      await navigator.clipboard.writeText(componentString);
+      const bgs= await navigator.clipboard.writeText(renderToString(bg.component));
+      console.log(bgs);
     } catch (err) {
       console.error('Failed to copy code:', err);
     }
