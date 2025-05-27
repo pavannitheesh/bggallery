@@ -1,3 +1,12 @@
+
+const BgAuroraWave = () => {
+  return (
+    <div className="absolute inset-0 -z-10 h-full w-full bg-neutral-900">
+      <div className="absolute top-[10%] left-[5%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle,rgba(120,119,198,0.3),transparent)] blur-[120px]" />
+      <div className="absolute bottom-[15%] right-[10%] h-[400px] w-[400px] rounded-full bg-[radial-gradient(circle,rgba(255,0,122,0.2),transparent)] blur-[100px]" />
+    </div>
+  );
+};
 const BgLightGrid1 = () => {
   return (
     <div className="absolute inset-0 -z-10 h-full w-full bg-white bg-[radial-gradient(#e5e7eb_1px,transparent_1px)] [background-size:16px_16px]" />
@@ -155,8 +164,94 @@ const BgDarkGrid3 = () => {
     </div>
   );
 };
+const BgModernLanding = ({ mode = 'light' }) => {
+  const isDark = mode === 'dark';
+
+  return (
+    <div
+      className={`absolute inset-0 -z-10 h-full w-full transition-colors duration-1000 ${
+        isDark ? 'bg-[#0f0f1c]' : 'bg-[#fdfdfd]'
+      }`}
+    >
+      {/* Gradient Overlay */}
+      <div
+        className={`absolute inset-0 ${
+          isDark
+            ? 'bg-[radial-gradient(ellipse_at_center,_#1a1a2e_0%,_transparent_80%)]'
+            : 'bg-[radial-gradient(circle_at_50%_30%,_#c7d2fe_0%,_transparent_60%)]'
+        }`}
+      />
+
+      {/* Grid Pattern */}
+      <div
+        className={`absolute inset-0 ${
+          isDark
+            ? 'bg-[radial-gradient(#2d2d48_1px,_transparent_1px)]'
+            : 'bg-[radial-gradient(#e5e7eb_1px,_transparent_1px)]'
+        } [background-size:16px_16px] opacity-50`}
+      />
+    </div>
+  );
+};
+const BgMintGlow = () => {
+  return (
+    <div className="absolute inset-0 -z-10 h-full w-full bg-white">
+      <div className="absolute top-[30%] left-[40%] h-[600px] w-[600px] rounded-full bg-[radial-gradient(circle,rgba(34,211,238,0.3),transparent)] blur-[150px]" />
+    </div>
+  );
+};
+const BgPeachBlurGrid = () => {
+  return (
+    <div className="relative h-full w-full bg-white">
+      <div className="absolute inset-0 bg-[linear-gradient(to_right,#f5f5f599_1px,transparent_1px),linear-gradient(to_bottom,#f5f5f599_1px,transparent_1px)] bg-[size:32px_32px]" />
+      <div className="absolute top-[10%] left-[20%] h-[400px] w-[400px] rounded-full bg-[radial-gradient(circle,rgba(255,186,150,0.3),transparent)] blur-[100px]" />
+    </div>
+  );
+};
+const BgCyberGlow = () => {
+  return (
+    <div className="relative h-full w-full bg-neutral-950">
+      <div className="absolute top-[15%] left-[10%] h-[500px] w-[500px] rounded-full bg-[radial-gradient(circle,rgba(168,85,247,0.3),transparent)] blur-[100px]" />
+      <div className="absolute bottom-[10%] right-[10%] h-[400px] w-[400px] rounded-full bg-[radial-gradient(circle,rgba(251,113,133,0.25),transparent)] blur-[100px]" />
+    </div>
+  );
+};
+const BgMultiGlowMesh = () => {
+  return (
+    <div className="relative h-full w-full bg-black">
+      <div className="absolute top-[5%] left-[10%] h-[300px] w-[300px] rounded-full bg-[radial-gradient(circle,rgba(0,255,234,0.2),transparent)] blur-[100px]" />
+      <div className="absolute bottom-[10%] right-[10%] h-[300px] w-[300px] rounded-full bg-[radial-gradient(circle,rgba(255,99,132,0.2),transparent)] blur-[100px]" />
+      <div className="absolute top-[40%] left-[45%] h-[250px] w-[250px] rounded-full bg-[radial-gradient(circle,rgba(54,162,235,0.2),transparent)] blur-[100px]" />
+    </div>
+  );
+};
 
 export const BACKGROUND_OPTIONS = [
+  {
+    name: 'BgMultiGlowMesh',
+    component: <BgMultiGlowMesh />,
+    theme: 'dark',
+  },
+  {
+    name: 'BgCyberGlow',
+    component: <BgCyberGlow />,
+    theme: 'dark',
+  },
+  {
+    name: 'BgPeachBlurGrid',
+    component: <BgPeachBlurGrid />,
+    theme: 'light',
+  },
+  {
+    name: 'BgMintGlow',
+    component: <BgMintGlow />,
+    theme: 'light',
+  },
+  {
+    name: 'BgAuroraWave',
+    component: <BgAuroraWave />,
+    theme: 'dark',
+  },
   {
     name: 'Background Light Gradient 1',
     component: <BgLightGradient1 />,
@@ -267,4 +362,9 @@ export const BACKGROUND_OPTIONS = [
     component: <BgDarkGrid3 />,
     theme: 'dark',
   },
+  {
+    name: 'Background Landing Page',
+    component: <BgModernLanding mode="dark" />,
+    theme: 'dark',
+  }
 ] as const;
